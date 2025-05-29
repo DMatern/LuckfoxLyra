@@ -1,12 +1,12 @@
 # LuckfoxLyra
 Information on Luckfox Lyra Linux Board, Programming, and use in applications
 
-Hardware Infroamtion:
+# Hardware Infroamtion:
 GPIO (https://wiki.luckfox.com/Luckfox-Lyra/Buildroot/Lyra-pinout/GPIO/)
 I2C  (https://wiki.luckfox.com/Luckfox-Lyra/Buildroot/Lyra-pinout/I2C)
 SPI  (https://wiki.luckfox.com/Luckfox-Lyra/Buildroot/Lyra-pinout/SPI)
 
-Software Information:
+# Software Information:
 
 default user directory:  /root/
 my code test directory:  /root/dev/
@@ -26,14 +26,14 @@ Copy file from SD card to appropret directory and the run code
 
   ./my_program
 
-Mount SD Card:
+> Mount SD Card:
 
 Create Directory: sudo mkdir /mnt/sdcard
 Mount SD Card:    sudo mount /dev/mmcblk0p1 /mnt/sdcard
 Verify Device:    df -h
 
 
-> GPIO:
+# GPIO:
 
 pin = bank * 32 + number
 number = group * 8 + X
@@ -82,11 +82,11 @@ echo in > direction                       # Set GPIO as input
 
 Control GPIO Level Using the value Attribute
 
-# Output
+Output
 echo 1 > value
 echo 0 > value
 
-# Input
+Input
 cat value        
 
 Pinout:
