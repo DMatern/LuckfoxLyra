@@ -11,7 +11,7 @@ Software Information:
 default user directory:  /root/
 my code test directory:  /root/dev/
 
-Program Process:
+> Program Process:
 
 WSL Required Libraries - 
   ARM Gcc Plugin - sudo apt install gcc-arm-linux-gnueabihf
@@ -33,7 +33,7 @@ Mount SD Card:    sudo mount /dev/mmcblk0p1 /mnt/sdcard
 Verify Device:    df -h
 
 
->GPIO:
+> GPIO:
 
 pin = bank * 32 + number
 number = group * 8 + X
