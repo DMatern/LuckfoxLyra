@@ -1,6 +1,8 @@
 # LuckfoxLyra
 Information on Luckfox Lyra Linux Board, Programming, and use in applications
 
+RK3506G2 Multi-core heterogeneous CPU, compatible with Raspberry Pi DSI screens, RM_IO support (multiplexing PWM, UART, I2C, SPI, CAN and other function signals), ADC, reserved RMII interface, 128MB DDR3L Memory, SPI NAND FLASH (256MB).
+
 # Hardware Infroamtion:
 GPIO (https://wiki.luckfox.com/Luckfox-Lyra/Buildroot/Lyra-pinout/GPIO/)
 I2C  (https://wiki.luckfox.com/Luckfox-Lyra/Buildroot/Lyra-pinout/I2C)
