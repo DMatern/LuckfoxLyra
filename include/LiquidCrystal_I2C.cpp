@@ -10,6 +10,10 @@
 #include <stdexcept>
 #include <string>
 
+
+#include <errno> // Debug Error Message Handeling
+
+
 // When the display powers up, it is configured as follows:
 //
 // 1. Display clear
@@ -29,7 +33,7 @@
 // can't assume that its in that state when a sketch starts (and the
 // LiquidCrystal constructor is called).
 
-LiquidCrystal_I2C::LiquidCrystal_I2C(uint8_t lcd_Addr, uint8_t lcd_cols, uint8_t lcd_rows, const std::string lcd_Bus) {
+LiquidCrystal_I2C::LiquidCrystal_I2C(uint8_t lcd_Addr, uint8_t lcd_cols, uint8_t lcd_rows, const String lcd_Bus) {
     _Addr = lcd_Addr;
     _cols = lcd_cols;
     _rows = lcd_rows;
@@ -38,12 +42,14 @@ LiquidCrystal_I2C::LiquidCrystal_I2C(uint8_t lcd_Addr, uint8_t lcd_cols, uint8_t
     // Open the I2C bus
     _fd = open(lcd_Bus.c_str(), O_RDWR);
     if (_fd < 0) {
-        throw std::runtime_error("Failed to open I2C bus");
+        //throw std::runtime_error("Failed to open I2C bus");
+		perror("Failed to open I2C Bus");
     }
 
     // Set the I2C slave address
     if (ioctl(_fd, I2C_SLAVE, _Addr) < 0) {
-        throw std::runtime_error("Failed to set I2C address");
+        //throw std::runtime_error("Failed to set I2C address");
+		perror("Failed to set I2C address");
     }
 }
 
